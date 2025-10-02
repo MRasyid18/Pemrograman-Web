@@ -51,24 +51,6 @@ sections.forEach(section => {
     sectionObserver.observe(section);
 });
 
-// Navbar Hide/Show on Scroll
-let lastScrollY = window.scrollY;
-const navbar = document.getElementById('navbar');
-
-window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-    
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down
-        navbar.classList.add('navbar-hidden');
-    } else {
-        // Scrolling up
-        navbar.classList.remove('navbar-hidden');
-    }
-    
-    lastScrollY = currentScrollY;
-});
-
 // Smooth Scrolling for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
